@@ -4,8 +4,7 @@ use Think\Controller;
 class IndexController extends Controller {
     public function index(){
         //$this->show('ddf');
-        $c = D('Calendar');
-        $res = $c->getData();
+
         //var_dump($res);exit;
         $this->show($res[0]['title']);
 		$this->display();
@@ -13,7 +12,10 @@ class IndexController extends Controller {
 
 
     public function getData(){
+        $c = D('Calendar');
+        $res = $c->getData();
         //$this->show('ddf');
-        $this->display();
+        //$this->display();
+        echo json_encode($msg);exit;
     }
 }

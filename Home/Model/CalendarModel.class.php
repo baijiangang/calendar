@@ -11,7 +11,7 @@ class CalendarModel extends CommonModel {
 
 
 
-    public function getData($con){
-        return $this->where('id=1')->select();
+    public function getData($condition){
+        return $this->where($condition)->select();
     }
 }

@@ -25,19 +25,20 @@ $(document).ready(function() {
             right: 'prev,next today', 
             center: 'title', 
             left: 'month,agendaWeek,agendaDay' 
-        }, 
+        },
         firstDay:7,//每行第一天为周一 
         editable: true,//可以拖动 
-        events: [
-				{
-					title: '全天计划\r\n#####\r\n写代码',
-					start: '2015-04-27',
-					//end: '2015-04-27',
-					color: '#775ffa',
-					rendering: 'background'
-				},
-				//eventColor: '#378006'
-		]
+//        events: [
+//				{
+//					title: '全天计划\r\n#####\r\n写代码',
+//					start: '2015-04-27',
+//					//end: '2015-04-27',
+//					color: '#775ffa',
+//					rendering: 'background'
+//				},
+//				//eventColor: '#378006'
+//		]
+        events: "{:U('Index/getData')}"
 	}) 
  
 }); 
